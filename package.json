@@ -1,0 +1,25 @@
+{
+    "name": "swag-labs-test",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "cypress run"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Portella10/Swag-Labs-test.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Portella10/Swag-Labs-test/issues"
+    },
+    "homepage": "https://github.com/Portella10/Swag-Labs-test#readme",
+    "description": "",
+    "dependencies": {
+        "cypress": "^14.5.1"
+    },
+    "devDependencies": {
+        "cypress-mochawesome-reporter": "^4.0.2"
+    }
+}
