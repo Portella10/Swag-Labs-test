@@ -26,3 +26,4 @@
 
 import "./commands/login";
 import "./commands/produtos";
+import "./commands/compra";

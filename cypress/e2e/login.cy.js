@@ -18,7 +18,7 @@ describe("login", () => {
         cy.get("#login-button").click();
 
         //assert
-        cy.get(".error-message-container").should("have.text", "Epic sadface: Password is required");
+        cy.mensagemDeErro("Epic sadface: Password is required");
     });
 
     it("login com o campo username vazio deve apresentar uma mensagem de erro", () => {
@@ -27,16 +27,14 @@ describe("login", () => {
         cy.get("#login-button").click();
 
         //assert
-        cy.get(".error-message-container").should("have.text", "Epic sadface: Username is required");
+        cy.mensagemDeErro("Epic sadface: Username is required");
     });
 
     it("login com credencias incorretas deve apresentar mensagem de erro", () => {
         //act
-        cy.get("#user-name").click().type("alfred");
-        cy.get("#password").click().type("123456");
-        cy.get("#login-button").click();
+        cy.loginComCredenciaisInvalidas("alfred", "123456");
 
         //assert
-        cy.get(".error-message-container").should("have.text", "Epic sadface: Username and password do not match any user in this service");
+        cy.mensagemDeErro("Epic sadface: Username and password do not match any user in this service");
     });
 });
