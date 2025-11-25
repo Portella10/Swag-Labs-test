@@ -140,3 +140,4 @@ vite.config.ts.timestamp-*
 
 cypress/screenshots
 cypress/reports
+.DS_Store
